@@ -16,6 +16,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 gloox is a full-featured Jabber/XMPP client without GUI, written in
 C++ and implemented as a shared library.
 
+%description -l pl
+gloox jest pe³nym clienten Jabbera/XMPP, bez interfejsu graficznego,
+napisany zosta³ w C++ i zaimplementowany jako biblioteka dzielona.
+
 %package devel
 Summary:	gloox header files
 Summary(pl):	Pliki nag³ówkowe gloox
