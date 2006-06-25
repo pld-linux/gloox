@@ -10,6 +10,8 @@ Source0:	http://camaya.net/download/%{name}-%{version}.tar.bz2
 URL:		http://camaya.net/gloox
 BuildRequires:	gnutls-devel
 BuildRequires:	iksemel-devel
+BuildRequires:	libidn-devel
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -17,14 +19,18 @@ gloox is a full-featured Jabber/XMPP client without GUI, written in
 C++ and implemented as a shared library.
 
 %description -l pl
-gloox jest pe³nym clienten Jabbera/XMPP, bez interfejsu graficznego,
-napisany zosta³ w C++ i zaimplementowany jako biblioteka dzielona.
+gloox jest pe³nym clienten Jabbera/XMPP, bez interfejsu graficznego.
+Napisany zosta³ w C++ i zaimplementowany jako biblioteka dzielona.
 
 %package devel
 Summary:	gloox header files
 Summary(pl):	Pliki nag³ówkowe gloox
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	gnutls-devel
+Requires:	iksemel-devel
+Requires:	libidn-devel
+Requires:	zlib-devel
 
 %description devel
 Header files for gloox library.
@@ -48,7 +54,6 @@ Statyczna biblioteka gloox.
 %setup -q
 
 %build
-#cp -f /usr/share/automake/config.* .
 %configure
 
 %{__make}
@@ -67,16 +72,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README TODO
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/*
 %{_pkgconfigdir}/*
-%{_libdir}/lib*.la
-%attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_bindir}/*
 
 %files static
 %defattr(644,root,root,755)
