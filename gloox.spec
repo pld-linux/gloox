@@ -1,12 +1,12 @@
 Summary:	Jabber/XMPP client library
 Summary(pl):	Biblioteka klienta Jabber/XMPP
 Name:		gloox
-Version:	0.8
+Version:	0.8.1
 Release:	0.1
 License:	GPL
 Group:		Libraries
 Source0:	http://camaya.net/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	fc595ff8d468d2f4ebd73139494ea32c
+# Source0-md5:	9054d072f5972d5e567c428531734ad5
 URL:		http://camaya.net/gloox
 BuildRequires:	gnutls-devel
 BuildRequires:	iksemel-devel
