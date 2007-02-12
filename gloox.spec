@@ -1,5 +1,5 @@
 Summary:	Jabber/XMPP client library
-Summary(pl):	Biblioteka klienta Jabber/XMPP
+Summary(pl.UTF-8):   Biblioteka klienta Jabber/XMPP
 Name:		gloox
 Version:	0.8.1
 Release:	0.1
@@ -18,13 +18,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 gloox is a full-featured Jabber/XMPP client without GUI, written in
 C++ and implemented as a shared library.
 
-%description -l pl
-gloox jest pe≥nym clienten Jabbera/XMPP, bez interfejsu graficznego.
-Napisany zosta≥ w C++ i zaimplementowany jako biblioteka dzielona.
+%description -l pl.UTF-8
+gloox jest pe≈Çnym clienten Jabbera/XMPP, bez interfejsu graficznego.
+Napisany zosta≈Ç w C++ i zaimplementowany jako biblioteka dzielona.
 
 %package devel
 Summary:	gloox header files
-Summary(pl):	Pliki nag≥Ûwkowe gloox
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe gloox
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gnutls-devel
@@ -35,19 +35,19 @@ Requires:	zlib-devel
 %description devel
 Header files for gloox library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki gloox.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki gloox.
 
 %package static
 Summary:	gloox static library
-Summary(pl):	Statyczna biblioteka gloox
+Summary(pl.UTF-8):   Statyczna biblioteka gloox
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 gloox static library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka gloox.
 
 %prep
