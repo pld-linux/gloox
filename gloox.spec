@@ -1,5 +1,5 @@
 Summary:	Jabber/XMPP client library
-Summary(pl.UTF-8):   Biblioteka klienta Jabber/XMPP
+Summary(pl.UTF-8):	Biblioteka klienta Jabber/XMPP
 Name:		gloox
 Version:	0.8.1
 Release:	0.1
@@ -24,7 +24,7 @@ Napisany został w C++ i zaimplementowany jako biblioteka dzielona.
 
 %package devel
 Summary:	gloox header files
-Summary(pl.UTF-8):   Pliki nagłówkowe gloox
+Summary(pl.UTF-8):	Pliki nagłówkowe gloox
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gnutls-devel
@@ -40,7 +40,7 @@ Pliki nagłówkowe biblioteki gloox.
 
 %package static
 Summary:	gloox static library
-Summary(pl.UTF-8):   Statyczna biblioteka gloox
+Summary(pl.UTF-8):	Statyczna biblioteka gloox
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
