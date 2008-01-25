@@ -8,9 +8,12 @@ Group:		Libraries
 Source0:	http://camaya.net/download/%{name}-%{version}.tar.bz2
 # Source0-md5:	401fb00f306f758ea9dfc8b52fe9ef99
 URL:		http://camaya.net/gloox
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gnutls-devel
 BuildRequires:	iksemel-devel
 BuildRequires:	libidn-devel
+BuildRequires:	libtool
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
