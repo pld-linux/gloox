@@ -13,7 +13,9 @@ BuildRequires:	automake
 BuildRequires:	gnutls-devel
 BuildRequires:	iksemel-devel
 BuildRequires:	libidn-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -81,15 +83,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_libdir}/libgloox.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgloox.so.?
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*
-%{_pkgconfigdir}/*
+%attr(755,root,root) %{_bindir}/gloox-config
+%attr(755,root,root) %{_libdir}/libgloox.so
+%{_libdir}/libgloox.la
+%{_includedir}/gloox
+%{_pkgconfigdir}/gloox.pc
 
 %files static
 %defattr(644,root,root,755)
